@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mc2
+spec:
+  containers:
+  - name: 1st
+    image: kdursoji91/ipc-container:1.0.0
+    command: ["./ipc", "-producer"]
+  - name: 2nd
+    image: kdursoji91/ipc-container:1.0.0
+    command: ["./ipc", "-consumer"]
+  restartPolicy: Never
+  
